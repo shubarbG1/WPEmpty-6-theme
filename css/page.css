@@ -1,0 +1,104 @@
+/* --- Fonts --- */
+.page-content h1.page-title {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+.page-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 2rem;
+}
+.page-content h3 {
+    font-size: 22px;
+}
+.page-content h4 {
+    font-size: 20px;
+}
+.page-content h5 {
+    font-size: 18px;
+}
+.page-content h6 {
+    font-size: 17px;
+}
+
+/* -----------------
+--- For Page.php ---
+----------------- */
+.content-with-sidebar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.page-content-main {
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    border-radius: 2px;
+}
+.page-content-main h1.page-title {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.page-content-main h2,
+.page-content h3,
+.page-content-main p {
+    margin-bottom: 20px;
+}
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+    margin-bottom: 10px;
+}
+.page-content-main h2 {
+    margin-top: 20px;
+}
+.post-date {
+    margin-bottom: 15px;
+}
+.page-content-main .wp-block-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 1px 3px #999;
+}
+
+/* -- Sidebar Space -- */
+.asidebar {
+    max-width: 290px;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    .content-with-sidebar {
+        flex-direction: column;
+    }
+    .asidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post-wrap {
+        width: 100%;
+    }
+}
+
+
+/* ----------------------------------
+--- Privacy & Cookies Policy Page ---
+---------------------------------- */
+
+.page-id-17014027 ul {
+    list-style-type: disc;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+.page-id-17014027 hr {
+    margin: 25px 0;
+}

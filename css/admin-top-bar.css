@@ -1,0 +1,12 @@
+/* Front End Admin Top Bar For
+Logged Admin /Contributor/Author  */
+
+.site-header .nav-wrap {
+    margin-top: 32px!important;
+}
+
+  @media (max-width: 782px) {
+    .site-header .nav-wrap {
+      margin-top: 46px!important;
+    }
+  }

@@ -1,0 +1,372 @@
+/* ---------------------------
+--- Primary Top Navigation ---
+--------------------------- */
+
+/* -- Compensation for Fix Navbar -- */
+body { padding-top: 60px; }
+
+@media (max-width: 1000px) {
+    body { padding-top: 50px;
+    }
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+.site-header .nav-wrap {
+    margin: 0 auto;
+    padding: 0 20px 0 10px;
+    background-color: var(--light-grey);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+.nav-wrap .navbar {
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .site-logo img {
+    display: block;
+    max-width: 240px;
+    margin-right: 15px;
+}
+.navbar .nav-links .site-logo-mobile-menu {
+    display: none;
+}
+.navbar .nav-links {
+    z-index: 999;
+}
+.navbar .hamburger,
+.navbar .hamburger span {
+    display: none;
+}
+
+.nav-links > div > ul.menu {
+    display: flex;
+    flex-direction: row;  
+}
+.nav-links > div > ul.menu li {
+    white-space: nowrap;
+}
+.nav-links > div > ul.menu > li {
+    padding: 6px 12px;
+    list-style: none;
+}
+.nav-links > div > ul.menu > li > ul.sub-menu li {
+    padding: 8px 12px;
+    list-style: none;
+}
+
+
+/* --- Fonts Desktop --- */
+
+.nav-links .menu-item {
+    line-height: 1.7;
+}
+.nav-links > div > ul.menu li a {
+    font-size: 16px;
+    color: var(--text-color);
+}
+.nav-links > div > ul.menu > li > a {
+    font-weight: 500;
+}
+.nav-links > div > ul.menu > li > ul.sub-menu li a {
+    font-weight: 400;
+}
+.nav-links > div > ul.menu li a:hover {
+    text-decoration: none;
+}
+
+/* -----------------------
+--- Dropdown (Desktop) ---
+----------------------- */
+
+.nav-links > div > ul.menu li.menu-item-has-children {
+    position: relative;
+}
+
+/* -- Icon Arrow for Dropdowns -- */
+.nav-links > div > ul.menu > li.menu-item-has-children > a:after,
+.nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a:before {
+    content: '';
+    display: inline-block;
+    background-image: url('/wp-content/themes/empty-6/img/down-arrow-icon.png');
+    background-size: cover;
+    height: 10px;
+    width: 10px;
+    margin-left: 6px;
+    margin-bottom: -2px;
+}
+  .nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a:after {
+    display: none;
+}
+  .nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a:before {
+    transform: rotate(90deg);
+    margin-right: 7px;
+    margin-left: -3px;
+    margin-bottom: 0;
+}
+
+
+@media (min-width: 1001px) {
+    
+    /* -- Closed State Dropdown -- */
+    .nav-links > div > ul.menu li.menu-item-has-children ul.sub-menu {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute; 
+        background-color: var(--light-grey);
+        box-shadow: 1px 1px 2px #999;
+        transition: opacity 150ms ease-in, transform 150ms ease-in;
+    }
+    .nav-links > div > ul.menu > li.menu-item-has-children > ul.sub-menu {
+        transform: translateY(-15px);
+        top: 100%;
+        left: 10px;
+    }
+    .nav-links > div > ul.menu > li.menu-item-has-children > ul.sub-menu > li > ul.sub-menu {
+        top: 0;
+        right: 100%;
+    }
+
+    /* -- Opened State Dropdown -- */
+    .nav-links > div > ul.menu li.menu-item-has-children > ul.sub-menu.access,
+    .nav-links > div > ul.menu li.menu-item-has-children:hover > ul.sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    /* -- Navigation/Links Color -- */
+    .nav-links > div > ul.menu > li > ul.sub-menu li:not(:last-child) {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+}
+
+  
+@media (max-width: 1000px) {
+
+    /* --------------------
+    ----- Mobile Menu -----
+    -------------------- */
+
+    /* --- Fonts Mobile --- */
+    .nav-links > div > ul.menu > li > a {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .nav-links > div > ul.menu > li > ul.sub-menu a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    /* --- Margin & Padding --- */
+
+    .nav-links > div > ul.menu {
+        margin-left: 5px;
+    }
+    .nav-links > div > ul.menu > li {
+        padding: 10px 0;
+    }
+    .nav-links > div > ul.menu > li > ul.sub-menu li {
+        padding: 10px 0;
+    }
+
+    /* -- Hamburger -- */
+    .hamburger-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-radius: 50%;
+        transition: background-color 250ms ease;
+    }
+    .hamburger-wrap:hover {
+        background-color: #f0f0f0;
+        box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+    }
+    .navbar .hamburger {
+        display: block;
+        position: relative;
+        width: 22px;
+        height: 16px;
+        cursor: pointer;
+        z-index: 999;
+    }
+    .navbar .hamburger span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    .navbar .hamburger span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navbar .hamburger span:nth-child(3) {
+        bottom: 0;
+    }
+
+    /* -- Hamburger to Cross -- */
+    .navbar .hamburger.active span {
+        background: var(--light-grey);
+        height: 3px;
+    }
+    .navbar .hamburger.active span:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .navbar .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .navbar .hamburger.active span:nth-child(3) {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+
+    /* -- Mobile Menu Overlay -- */
+    header::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+        z-index: 0;
+    }
+    header.show-overlay::after {
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 997;
+    }
+
+
+    /* --- Mobile Nav ---  */
+    .site-header .navbar {
+        height: 50px;
+    }
+    .navbar .site-logo img {
+        max-width: 190px;
+        margin-right: 15px;
+    }
+    .navbar .nav-links .site-logo-mobile-menu {
+        display: block;
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+    .navbar .site-logo-mobile-menu img {
+        display: inline-block;
+        width: 100%;
+        max-width: 240px;
+        max-height: 65px;
+    }
+    .navbar .nav-links {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 300px;
+        height: 100vh;
+        padding: 30px;
+        background-color: var(--light-grey);
+        box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        transform: translateX(-330px);
+        transition: transform 250ms ease-in-out;
+    }
+    .navbar .nav-links a {
+        display: inline-block;
+        height: 100%;
+    }
+
+
+    /* ----------------------------------------
+    -- Mobile Menu Opening - JS added Classe --
+    ---------------------------------------- */
+
+    .nav-links.show-menu {
+        opacity: 1;  
+        visibility: visible;
+        transform: translateX(0);
+        overflow-y: auto;
+    }
+    .nav-links > div > ul.menu {
+        flex-direction: column;
+    }
+
+
+    /* ----------------------
+    --- Dropdown (Mobile) ---
+    ---------------------- */
+
+    /* -- Closed State Dropdown -- */
+
+    /* Cleaner Closing of Sub-menu */
+    ul.menu > li.menu-item {
+         background-color: var(--light-grey);
+    }
+
+    .nav-links > div > ul.menu > li ul.sub-menu {
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        margin-left: 10px;
+        transition: max-height 250ms ease-in-out, 250ms ease-in-out, opacity 350ms ease-in, visibility 350ms ease-in;
+    }
+
+     /* Tricks to Avoid Scroll Bar Appearing Before Expanding First Sub-menu  */
+     ul.menu > li > ul.sub-menu > li > ul.sub-menu { display: none; }
+     ul.menu > li > ul.sub-menu.toggle > li > ul.sub-menu { display: block; }   
+
+    /* -- Opened State Dropdown -- */
+    .nav-links > div > ul.menu > li ul.sub-menu.access,
+    .nav-links > div > ul.menu > li ul.sub-menu.toggle {
+        max-height: 1400px; /* Longer that the longest ul.sub-menu */
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-links > div > ul.menu > li > ul.sub-menu.access,
+    .nav-links > div > ul.menu > li > ul.sub-menu.toggle,
+    .nav-links > div > ul.menu > li > ul.sub-menu > li ul.sub-menu.access,
+    .nav-links > div > ul.menu > li > ul.sub-menu > li ul.sub-menu.toggle {
+        margin-top: 5px;
+    }
+    
+    /* -- Arrow Dropdown -- */
+    .nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a:before {
+        display: none;
+    }
+    .nav-links > div > ul.menu > li.menu-item-has-children > a:after,
+    .nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a:after {
+        content: '';
+        display: inline-block;
+        background-image: url('/wp-content/themes/empty-6/img/down-arrow-icon.png');
+        background-size: cover;
+        position: absolute;
+        right: 0px;
+        top: 20px;
+        height: 12px;
+        width: 12px;
+    }
+ 
+}

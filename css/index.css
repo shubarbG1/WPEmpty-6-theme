@@ -1,0 +1,92 @@
+/* --- Fonts --- */
+.index-content h1.page-title {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 2.6rem;
+}
+.index-content h2.post-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+/* ------------------
+--- For Index.php ---
+------------------ */
+.content-with-sidebar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.index-content-main {
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    border-radius: 2px;
+}
+h1.page-title {
+    margin-bottom: 20px;
+}
+.flex-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 15px;
+}
+.post-wrap {
+    width: calc(50% - 7.5px);
+    display: flex;
+    flex-direction: column;
+}
+.post-thumbnail img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 1px 3px #999;
+}
+h2.post-title a {
+    color: var(--text-color);
+}
+h2.post-title {
+    margin: 20px 0;
+}
+a.btn-read-more {
+    display: block;
+    width: fit-content;
+    padding: 11px 15px;
+    margin: 30px 0;
+    color: var(--light-grey);
+    background-color: var(--light-blue);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #e6e6e6;
+    transition: all 150ms ease-in-out;
+}
+a.btn-read-more:hover {
+    background-color: var(--dark-blue);
+}
+
+/* -- Sidebar Space -- */
+.asidebar {
+    max-width: 290px;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    .content-with-sidebar {
+        flex-direction: column;
+    }
+    .asidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post-wrap {
+        width: 100%;
+    }
+}

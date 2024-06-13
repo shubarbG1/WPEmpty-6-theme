@@ -1,0 +1,89 @@
+/* Animation Line on Menu */ 
+
+ .nav-links > div > ul.menu li {
+    position: relative;
+}
+
+.navbar .nav-links > div > ul.menu li:hover:before,
+.navbar .nav-links > div > ul.menu li.current-menu-item:before,
+.navbar .nav-links > div > ul.menu li.current-menu-ancestor:before {
+    content: "";
+    position: absolute;
+    background-color: var(--text-color);
+}
+
+.navbar .nav-links > div > ul.menu li.lang-item:hover:before {
+    display: none;
+}
+
+@media (min-width: 1001px) {
+
+    /* Background Color */
+    .navbar .nav-links > div > ul.menu > li,
+    .navbar .nav-links > div > ul.menu > li.current-menu {
+        background-color: transparent;
+        transition: background-color 250ms ease;
+    }
+    .navbar .nav-links > div > ul.menu > li:hover,
+    .navbar .nav-links > div > ul.menu > li.current-menu-item {
+        background-color: #f0f0f0;
+        box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+    }
+    .navbar .nav-links > div > ul.menu > li.menu-item-has-children:hover,
+    .navbar .nav-links > div > ul.menu > li.menu-item-has-children.current-menu-item {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    /* Sub-Menu */
+    /* Vertical line */
+    .navbar .nav-links > div > ul.menu > li > ul.sub-menu li:hover:before,
+    .navbar .nav-links > div > ul.menu > li > ul.sub-menu li.current-menu-item:before {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+    }
+    /* Background Color*/
+    .navbar .nav-links > div > ul.menu > li > ul.sub-menu li {
+        background-color: transparent;
+        transition: background-color 250ms ease;
+
+    }
+    .navbar .nav-links > div > ul.menu > li > ul.sub-menu li:hover {
+        background-color: #f0f0f0;
+    }   
+
+    /* Vertical line */
+    .navbar .nav-links > div > ul.menu > li > .sub-menu > li.current-menu-ancestor:before {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 5px;
+    }
+
+    /* Exclusion */
+    .navbar .nav-links > div > ul.menu > li.menu-item-has-children:hover:before
+    /* .navbar .nav-links > div > ul.menu > li > ul.sub-menu li.menu-item-has-children:hover:before */
+    {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    
+    /* List-style */
+    /* Current page, even parent from level 1 & 2 sub-menu */
+    .nav-links > div > ul.menu li.current-menu-item,
+    .nav-links > div > ul.menu li.current-menu-ancestor,
+    .nav-links > div > ul.menu > li > ul.sub-menu li.current-menu-item,
+    .nav-links > div > ul.menu > li > ul.sub-menu li.current-menu-ancestor {
+        list-style: circle;
+    }
+
+    /* List-style On Hover  */
+    /* .nav-links > div > ul.menu > li > ul.sub-menu li:hover,
+    .nav-links > div > ul.menu > li > ul.sub-menu li.menu-item-has-children:hover {
+        list-style: disc;
+    }  */
+} 

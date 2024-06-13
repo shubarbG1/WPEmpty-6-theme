@@ -1,0 +1,117 @@
+form.wpcf7-form > p {
+    margin: 25px 0;
+}
+
+form.wpcf7-form > p > label {
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-textarea,
+.wpcf7-form-control.wpcf7-select,
+.wpcf7-form-control.wpcf7-quiz {
+    background-color: var(--light-grey);
+    padding: 10px;
+    border: 1px solid var(--dark-grey);
+    border-radius: 3px;
+}
+.wpcf7-form-control.wpcf7-text {
+    height: 45px;
+}
+.wpcf7-form-control.wpcf7-text,
+.wpcf7-form-control.wpcf7-textarea {
+    width: 100%;
+}
+.wpcf7-form-control.wpcf7-textarea {
+    margin-top: 20px;
+}
+
+.wpcf7-form-control.wpcf7-checkbox {
+    display: flex;
+    flex-direction: column;
+}
+.wpcf7-checkbox .wpcf7-list-item-label {
+    margin-left: 5px;
+}
+.wpcf7-checkbox span.wpcf7-list-item {
+    margin: 5px 0;
+}
+
+.wpcf7-form .wpcf7-quiz-label {
+    font-size: 0.9rem;
+    margin-right: 15px;
+}
+.wpcf7-form-control.wpcf7-quiz {
+    height: 35px;
+    max-width: 70px;
+}
+
+.wpcf7-acceptance span.wpcf7-list-item {
+    margin: 20px 0 0;
+}
+.wpcf7-acceptance span.wpcf7-list-item-label {
+    margin-left: 5px;
+    font-size: 0.9rem;
+}
+
+.wpcf7-form .wpcf7-form-control.wpcf7-submit {
+    margin: 20px 0 0;
+    padding: 8px 16px;
+    width: 100%;
+    font-size: 1.1rem;
+    color: var(--light-grey);
+    background-color: var(--light-blue);
+    border: 1px solid var(--light-blue);
+    border-radius: 3px;
+    transition: background-color 250ms ease;
+}
+.wpcf7-form-control.wpcf7-submit:hover {
+    background-color: var(--dark-blue);
+    border: 1px solid var(--dark-blue);
+}
+
+/* Wcp7 Conditionnal Plugin */
+[data-id="Training"][data-class="wpcf7cf_group"] {
+    display: block;
+    margin: 30px 0;
+}
+[data-id="Training"][data-class="wpcf7cf_group"] .wpcf7-textarea {
+    margin-top: 20px;
+}
+[data-id="Training"][data-class="wpcf7cf_group"] .wpcf7-text {
+    margin: 10px 0;
+}
+
+
+/* -------------------
+--- Specific Pages ---
+------------------- */
+
+/* Home */
+
+#wpcf7-f23031370-p1092-o2 .wpcf7-acceptance span.wpcf7-list-item,
+#wpcf7-f23031370-p1096-o2 .wpcf7-acceptance span.wpcf7-list-item {
+    color: var(--light-grey);
+	margin-top: 0;
+}
+#wpcf7-f23031370-p1092-o2 form.wpcf7-form > p,
+#wpcf7-f23031370-p1096-o2 form.wpcf7-form > p {
+    margin: 0;
+}
+
+#wpcf7-f23031370-p1092-o2 form.wpcf7-form .wpcf7-submit:hover,
+#wpcf7-f23031370-p1096-o2 form.wpcf7-form .wpcf7-submit:hover {
+    border: 1px solid var(--light-grey);
+}
+
+/* Registration */
+.label-date,
+.label-program {
+    font-size: 17px !important;
+    font-weight: 700;
+}
+.label-date {
+    padding-bottom: 10px !important;
+}

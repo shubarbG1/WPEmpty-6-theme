@@ -1,0 +1,242 @@
+/*
+Theme Name: Empty 6
+Version: 2.0
+Description: A minimal WordPress theme.
+*/
+
+body {
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+body,
+.nav-wrap,
+.footer-wrap,
+.copyright {
+    max-width: var(--site-max-with);
+}
+
+.elementor {
+    max-width: var(--site-max-with);
+    margin: 0 auto;
+}
+
+/* Templates */
+.page-content,
+.single-content,
+.index-content {
+    width: 100%;
+    padding: var(--padding-global);
+}
+
+.navbar,
+.content-with-sidebar,
+.footer-wrap .widget-area,
+.copyright p {
+    max-width: var(--site-width);
+}
+
+.main-wrap {
+    margin-bottom: 0px;
+}
+
+.footer-wrap {
+    padding: 40px var(--padding-global);
+}
+
+
+/* ---------------
+----- GLOBAL -----
+--------------- */
+
+:root {
+
+    /* -- Site Width -- */
+    --site-max-with: 2560px;
+    --site-width: 1320px;
+
+    /* Site Margin & Padding -- */
+    --margin-section: 60px;
+    --padding-global: 25px;
+    --padding-column: 40px;
+}
+
+@media (max-width: 780px) {
+    :root {
+        /* Site Margin & Padding -- */
+        --padding-column: 30px;       
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        /* Site Margin & Padding -- */
+        --padding-global: 20px;
+        --padding-column: 20px;  
+    }
+}
+
+/* --- Fonts --- */
+body {
+    color: var(--text-color);
+    font-family: open-sans, Arial, Roboto, "Segoe UI", Tahoma, "DejaVu Sans", "Nimbus Sans", FreeSans, Ubuntu, -apple-system, sans-serif;
+}
+
+/* -- GENERAL -- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+ul li {
+    font-size: 17px;
+    line-height: 2.2;
+}
+a,
+ul li a {
+    text-decoration: none;
+    cursor: pointer;
+}
+.strong-p {
+    font-weight: 600;
+}
+.anchor {
+    scroll-margin-top: 80px;
+}
+a {
+    color: var(--light-blue);
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------
+--- Accessibility ---
+-------------------*/
+
+.skip-to-main-content-link {
+    position: absolute;
+    z-index: 999;
+    padding: 10px;
+    background-color: var(--light-grey);
+    color: var(--text-color);
+    opacity: 0;
+}
+
+.skip-to-main-content-link:focus {
+    opacity: 1;
+}
+
+/* -------------- 
+--- Elementor ---
+-------------- */
+
+/* -- Global Header Max Height -- */
+header.elementor-section.elementor-top-section {
+    max-height: 1200px!important;
+}
+
+/* -- Bullet List -- */
+/* Private Classes */
+.page-id-1333 .elementor-widget-container ul,
+.page-id-1939 .elementor-widget-container ul,
+/* Our Yoga Styles */
+.page-id-1416 .elementor-widget-container ul,
+/* YTT Registration */
+.page-id-4060 .elementor-widget-container ul,
+.page-id-1302 .elementor-widget-container ul,
+/* 200 & 300 YTT */
+.page-id-23017334 .elementor-widget-container ul,
+.page-id-23022480 .elementor-widget-container ul,
+.page-id-23022482 .elementor-widget-container ul,
+.page-id-23017447 .elementor-widget-container ul {
+    margin-left: 15px;
+}
+
+/* --------------- 
+--- BreadCrumb ---
+--------------- */
+.breadcrumb,
+.breadcrumb a {
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------
+--- Table of Content (Blog)---
+--------------------------- */
+
+.single-post div#ez-toc-container {
+    padding: 18px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+.single-content .ez-toc-title-container {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.single-content li.ez-toc-page-1:first-of-type {
+    display: none;
+}
+.single-content li.ez-toc-page-1 {
+    line-height: 2rem!important;
+}
+.single-content li.ez-toc-page-1:last-of-type {
+    margin-top: 5px!important;
+}
+
+/* -------------------
+--- Cookies-Notice ---
+------------------- */
+#hu #hu-top,
+#hu-cookies-save,
+#hu-revoke .hu-revoke-button {
+    background: var(--light-blue) !important;
+}
+#hu-cookies-save {
+    border: none!important;
+    padding: 10px 30px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+
+}
+#hu .hu-links .hu-nav-item.hu-has-icon,
+#hu .hu-btn.hu-btn-link {
+    color: var(--light-blue) !important;
+}
+.hu-icon-maximize-toggle,
+.hu-icon-software-download,
+.hu-icon-printer,
+.hu-duration-content {
+    display: none!important;
+}
+
+:root {
+    --hu-borderColor: #d1d1d1!important;
+    --hu-disabledColor: #c1c1c1!important;
+}
+.hu-radio-toggle.hu-cookies-notice-consent-choices-1 .hu-toggle-switch {
+    background-color: var(--light-blue) !important;
+}
+.hu-radio-toggle.hu-cookies-notice-consent-choices-2 .hu-toggle-switch {
+    background-color: #e1e1e1 !important;
+}
+.hu-radio-toggle.hu-cookies-notice-consent-choices-3 .hu-toggle-switch {
+    background-color: #999 !important;
+}
+#hu .hu-dropdown-toggle-container select {
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.1),inset 0 0 1px 1px #79afcf !important;
+}
+

@@ -1,0 +1,189 @@
+/* --------------- 
+----- POP UP ----- 
+----------------*/
+
+.popup-container {
+    display: none;
+    justify-content: center;    
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+
+    /* top: 0; */
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+
+    background-color: red;
+}
+
+/* Open PopUp | JS added Class */
+.popup-container.display-1 {
+    display: flex;
+}
+
+.popup-box {
+
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px;   
+    width: calc(100% - 20px);
+    max-width: 1170px;
+    height: 100px;
+    box-shadow: 0 1px 3px #444;
+
+    border: 3px solid #262E3E;
+}
+
+.popup-box p {
+    margin-bottom: 0;
+    line-height: 1.3;
+    padding-top: 4px;
+}
+
+.sides {
+    width: 50%;
+}
+
+.side-1 {
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.insides {
+    height: 100%;
+    width: 100%;
+}
+
+.inside-1 {
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+    padding: 0 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 50px 0;
+}
+
+.popup-slogan p {
+    display: block;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--light-grey);
+    max-width: 330px;
+}
+
+.side-2 {
+    background-color: var(--dark-blue);
+}
+
+.inside-2 {
+    background-color: var(--light-grey);
+
+    background-image: url(/wp-content/uploads/site-logo-232.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+
+    border-radius: 50px 0 0 0;
+}
+
+.div-btn {
+    display: none;
+}
+
+.btn-registration {
+    max-width: 330px;
+    padding: 8px 20px 5px;
+    color: var(--light-grey);
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+    background-color: var(--dark-blue);
+    border: 2px solid var(--light-grey);
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #444;
+    cursor: pointer;
+}
+
+.popup-box:hover .div-btn {
+    display: block; 
+}
+
+.popup-box:hover .popup-slogan {
+    display: none;
+}
+
+.inside-1 .btn-registration:hover {
+    background-color: #ffffff22;
+}
+
+.close-popup {
+    position: absolute;
+    top: -36px;
+    right: -2px;
+    width: 33px;
+    height: 33px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey);
+    box-shadow: 0 1px 2px #444;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 2px;
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.close-popup img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.9;
+}
+
+@media (max-width: 1050px) {
+    .popup-box {
+        height: 140px;
+    }
+}
+
+@media (max-width: 880px) {
+
+    .inside-1 {    
+        border-radius: 0 0 60px 0;
+    }
+    .inside-2 {
+        background-size: 260px;
+        border-radius: 60px 0 0 0;
+    }   
+}
+
+@media (max-width: 700px) {
+
+    .popup-box { 
+        flex-direction: column;        
+    }
+    .sides {
+         width: 100%;
+    }
+    .popup-box {
+        height: 245px;
+    }
+    .insides {
+        min-height: 120px
+    }
+    .inside-1 {
+        border-radius: 0 0 0 88px;
+    }
+    .inside-2 {        
+        border-radius: 0 88px 0 0;
+    }
+}

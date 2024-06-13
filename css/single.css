@@ -1,0 +1,93 @@
+/* --- Fonts --- */
+.single-content h1.post-title {
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+.single-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 2rem;
+}
+.single-content h3 {
+    font-size: 22px;
+}
+.single-content h4 {
+    font-size: 20px;
+}
+.single-content h5 {
+    font-size: 18px;
+}
+.single-content h6 {
+    font-size: 17px;
+}
+
+/* -------------------
+--- For Single.php ---
+------------------- */
+.content-with-sidebar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.single-content-main {
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    border-radius: 2px;
+}
+.single-content-main h1.post-title {
+    margin-bottom: 20px;
+}
+.single-content-main p.post-date {
+    margin-bottom: 15px;
+}
+.single-content-main h2,
+.single-content-main h3,
+.single-content-main p {
+    margin-bottom: 20px;
+}
+.single-content h4,
+.single-content h5,
+.single-content h6 {
+    margin-bottom: 10px;
+}
+.single-content-main h2 {
+    margin-top: 20px;
+}
+.single-content-main ul {
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+.single-content-main .wp-block-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 1px 3px #999;
+}
+
+/* -- Sidebar Space -- */
+.asidebar {
+    max-width: 290px;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+    .content-with-sidebar {
+        flex-direction: column;
+    }
+    .asidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post-wrap {
+        width: 100%;
+    }
+}
