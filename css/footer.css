@@ -1,11 +1,8 @@
 /* --- Footer --- */
-
-.site-footer * {
+.site-footer li a {
     color: var(--text-color);
 }
-.site-footer {
-    font-size: 16px;
-}
+
 .site-footer,
 .site-footer ul {
     list-style: none;
@@ -21,49 +18,70 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.site-footer h2.widgettitle {
+ } 
+.site-footer .widgettitle {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 8px;
 }
+
+/* ------------------
+--- Copyright Bar ---
+-------------------*/
+
+.copyright {
+    padding: 0 var(--padding-global);
+    background-color: var(--mid-grey);
+    text-align: left;
+    margin: 0 auto;
+}
+.copyright p {
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+/* ------------------
+--- Custom Widget ---
+------------------ */
+
 .contact-widget {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .contact-widget img.contact-icons {
     width: 20px;
     margin-right: 10px;
     margin-bottom: -4px;
 }
-.social-widget h2.widgettitle {
-    display: inline-block;
-    margin-right: 8px;
-}
 .social-widget img.social-icons {
     width: 30px;
-    margin-right: 3px;
-    margin-bottom: -4px;
+    margin-bottom: -6px;
 }
-.copyright {
-    padding: 0 var(--padding-global);
-    background-color: var(--mid-grey);
-    text-align: right;
-    margin: 0 auto;
-}
-.copyright p {
-    font-size: 12px;
-    line-height: 30px;
-    margin: 0 auto;
+.widget.social-widget .li-social {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-@media (max-width: 1000px) {
+
+@media (max-width: 768px) {
     .footer-wrap .widget-area {
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
     }
     .footer-wrap .widget_nav_menu {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
+    .widget,
+    .copyright {
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-wrap .widget-area {
+        align-items:flex-start;
+    }
+    .widget,
     .copyright {
         text-align: left;
     }
