@@ -34,9 +34,9 @@ Template Post Type: post
                     <div id="search-sort-wrap" class="search-sort-wrap anchor">
 
                         <div class="dropdown">
-                            <button id="dropdown-btn" class="dropdown-btn"><img src="<?php echo get_template_directory_uri(); ?>/img/filter-icon.png" alt="filter icon"><span class="info-btn">Filters</span></button>
+                            <button id="dropdown-btn" class="dropdown-btn"><img src="<?php echo get_template_directory_uri(); ?>/icons/filter-icon.png" alt="filter icon"><span class="info-btn">Filters</span></button>
                             <div id="dropdown-content" class="dropdown-content">
-                                <div id="close-btn" class="close-btn"><img src="<?php echo get_template_directory_uri(); ?>/img/cross-icon.png" alt="close icon"></div>
+                                <div id="close-btn" class="close-btn"><img src="<?php echo get_template_directory_uri(); ?>/icons/cross-icon.png" alt="close icon"></div>
 
                                 <div id="checkboxes" class="sort-box-wrap">
                                     <div class="sort-box sort-types">
@@ -74,10 +74,10 @@ Template Post Type: post
                         </div>
 
                         <form class="form-container">
-                            <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/img/search-icon.png" alt="search icon">
+                            <img class="search-icon" src="<?php echo get_template_directory_uri(); ?>/icons/search-icon.png" alt="search icon">
                             <input type="text" name="" id="search-input" placeholder="Search Your Yoga Poses"
                             onkeyup="search()">
-                            <img class="cross-icon" src="<?php echo get_template_directory_uri(); ?>/img/cross-icon.png" alt="cross icon">
+                            <img class="cross-icon" src="<?php echo get_template_directory_uri(); ?>/icons/cross-icon.png" alt="cross icon">
                         </form>
                         <!-- <p>(e.g.) lotus pose, sukhasana, Back-bend, twist pose, beginner, advance</p> -->
                     </div>
@@ -100,7 +100,7 @@ Template Post Type: post
                                             <source media="(max-width: 500px)" srcset="<?php echo $pose['img_srcset_2']; ?>">
                                             <img src="<?php echo $pose['img_src']; ?>" class="pose-image" loading="lazy" title="<?php echo $pose['img_title']; ?>" alt="<?php echo $pose['img_alt']; ?>">
                                         </picture>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/plus-circle-black-icon-2.png" class="more-info-icon" title="See the Asana Description" loading="lazy" alt="arrow icon">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/icons/plus-circle-black-icon-2.png" class="more-info-icon" title="See the Asana Description" loading="lazy" alt="arrow icon">
                                     </div>
                                 </div>   
 

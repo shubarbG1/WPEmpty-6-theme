@@ -19,7 +19,7 @@
         </div>
 
         <div class="close-popup">
-            <img class="close-popup-icon" src="<?php echo get_template_directory_uri(); ?>/img/cross-icon.png" alt="">
+            <img class="close-popup-icon" src="<?php echo get_template_directory_uri(); ?>/icons/cross-icon.png" alt="">
         </div>
     </div>
     

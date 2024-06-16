@@ -97,7 +97,7 @@ body { padding-top: 60px; }
 .nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a:before {
     content: '';
     display: inline-block;
-    background-image: url('/wp-content/themes/empty-6/img/down-arrow-icon.png');
+    background-image: url('/wp-content/themes/empty-6/icons/down-arrow-icon.png');
     background-size: cover;
     height: 10px;
     width: 10px;
@@ -360,7 +360,7 @@ body { padding-top: 60px; }
     .nav-links > div > ul.menu > li > ul.sub-menu > li.menu-item-has-children > a:after {
         content: '';
         display: inline-block;
-        background-image: url('/wp-content/themes/empty-6/img/down-arrow-icon.png');
+        background-image: url('/wp-content/themes/empty-6/icons/down-arrow-icon.png');
         background-size: cover;
         position: absolute;
         right: 0px;

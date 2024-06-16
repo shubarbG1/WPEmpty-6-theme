@@ -27,7 +27,7 @@
                 <nav class="navbar">
 
                     <a class="site-logo" href="<?php echo home_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="site-logo" alt="YogaBreezeBali logo">
+                        <img src="<?php echo get_template_directory_uri(); ?>/icons/logo.png" class="site-logo" alt="YogaBreezeBali logo">
                     </a>
 
                     <div class="hamburger-wrap">
@@ -42,7 +42,7 @@
 
                         <div class="site-logo-mobile-menu">
                             <a href="<?php echo home_url(); ?>">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" class="site-logo" alt="Your Logo">
+                                <img src="<?php echo get_template_directory_uri(); ?>/icons/logo.png" class="site-logo" alt="Your Logo">
                             </a>
                         </div>
     
